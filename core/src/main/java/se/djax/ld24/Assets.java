@@ -153,7 +153,7 @@ public class Assets {
 		credits = new Texture(Gdx.files.internal("art/credits.png"));
 		Texture texture = new Texture(Gdx.files.internal("fonts/game_font.png"));
 		game_font = new BitmapFont(Gdx.files.internal("fonts/game_font.fnt"), new TextureRegion(texture), false);
-		// game_font.setScale(0.5F); TODO
+		game_font.getData().setScale(0.5f);
 		musics = new Music[10];
 		musics[0] = Gdx.audio.newMusic(Gdx.files.internal("sound/music_1.mp3"));
 		musics[0].setLooping(true);
