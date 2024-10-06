@@ -1,3 +1,5 @@
+
+/* Decompiler 30ms, total 192ms, lines 43 */
 package se.djax.ld24;
 
 import com.badlogic.gdx.Gdx;
@@ -5,15 +7,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class lose implements Screen {
 	float startDelay;
-
 	String text;
-
 	int level;
 
 	public lose(int level, String text) {
 		this.level = level;
 		this.text = text;
-		LdJam.continues--;
+		--LdJam.continues;
 		Assets.darwin_fail.play();
 	}
 
@@ -27,6 +27,7 @@ public class lose implements Screen {
 		} else {
 			Assets.game_font.draw(batch, "PRESS SPACE TO GIVE LIFE ANOTHER CHANCE", 180.0F, 50.0F);
 		}
+
 	}
 
 	@Override
@@ -40,5 +41,6 @@ public class lose implements Screen {
 				LdJam.changeScreen(LdJam.NewGameScreenFactory(this.level));
 			}
 		}
+
 	}
 }

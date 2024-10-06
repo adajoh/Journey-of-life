@@ -1,3 +1,5 @@
+
+/* Decompiler 60ms, total 219ms, lines 127 */
 package se.djax.ld24;
 
 import com.badlogic.gdx.ApplicationListener;
@@ -7,19 +9,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class LdJam implements ApplicationListener {
 	private OrthographicCamera camera;
-
 	private SpriteBatch batch;
-
 	float screenWidth;
-
 	float screenHeight;
-
 	public static Screen currentScreen;
-
 	public static int continues = 5;
-
 	public static float timePlaying;
-
 	public static int score;
 
 	@Override
@@ -49,46 +44,55 @@ public class LdJam implements ApplicationListener {
 			Assets.stopMusic();
 			changeScreen(new game_1());
 		}
+
 		if (Gdx.input.isKeyPressed(9)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new game_2());
 		}
+
 		if (Gdx.input.isKeyPressed(10)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new game_3());
 		}
+
 		if (Gdx.input.isKeyPressed(11)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new game_4());
 		}
+
 		if (Gdx.input.isKeyPressed(12)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new game_5());
 		}
+
 		if (Gdx.input.isKeyPressed(7)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new evo(2));
 		}
+
 		if (Gdx.input.isKeyPressed(16)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new win(4, Texts.texts[107]));
 		}
+
 		if (Gdx.input.isKeyPressed(15)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new lose(1, "test"));
 		}
+
 		if (Gdx.input.isKeyPressed(14)) {
 			Assets.Load();
 			Assets.stopMusic();
 			changeScreen(new Credits());
 		}
+
 		timePlaying += Gdx.graphics.getRawDeltaTime();
 		currentScreen.update(Gdx.graphics.getRawDeltaTime());
 		this.batch.setProjectionMatrix(this.camera.combined);
@@ -116,16 +120,16 @@ public class LdJam implements ApplicationListener {
 
 	public static Screen NewGameScreenFactory(int i) {
 		Util.log("Loading gamescreen: " + i);
-		if (i == 1)
+		if (i == 1) {
 			return new game_1();
-		if (i == 2)
+		} else if (i == 2) {
 			return new game_2();
-		if (i == 3)
+		} else if (i == 3) {
 			return new game_3();
-		if (i == 4)
+		} else if (i == 4) {
 			return new game_4();
-		if (i == 5)
-			return new game_5();
-		return null;
+		} else {
+			return i == 5 ? new game_5() : null;
+		}
 	}
 }

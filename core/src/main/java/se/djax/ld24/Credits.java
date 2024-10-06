@@ -1,3 +1,5 @@
+
+/* Decompiler 45ms, total 261ms, lines 78 */
 package se.djax.ld24;
 
 import com.badlogic.gdx.Gdx;
@@ -7,27 +9,16 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class Credits implements Screen {
 	float creditsY = -40.0F;
-
 	float distance = 100.0F;
-
 	float time;
-
 	TextureRegion[] spriteSheet;
-
 	float y2;
-
 	float y3;
-
 	float y4;
-
 	float y5;
-
 	float y6;
-
 	float y7;
-
 	float startDelay;
-
 	boolean objectiveShowed = false;
 
 	public Credits() {
@@ -65,11 +56,12 @@ public class Credits implements Screen {
 		} else {
 			batch.draw(Assets.credits, 0.0F, 0.0F, 800.0F, 600.0F);
 		}
+
 	}
 
 	@Override
 	public void update(float rawDeltaTime) {
-		Texts.texts[114] = "TIME: " + ((int) this.time / 60) + " MIN, SCORE: " + LdJam.score;
+		Texts.texts[114] = "TIME: " + (int) this.time / 60 + " MIN, SCORE: " + LdJam.score;
 		if (this.objectiveShowed) {
 			this.creditsY = (float) (this.creditsY + 0.5D);
 		} else {
@@ -79,9 +71,11 @@ public class Credits implements Screen {
 				Assets.musics[6].play();
 			}
 		}
+
 		if (this.creditsY > 1250.0F) {
 			Assets.stopMusic();
 			LdJam.changeScreen(new Intro());
 		}
+
 	}
 }

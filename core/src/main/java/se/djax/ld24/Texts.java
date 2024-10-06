@@ -1,64 +1,37 @@
+
+/* Decompiler 14ms, total 168ms, lines 68 */
 package se.djax.ld24;
 
 public class Texts {
 	public static String[] texts;
-
 	public static final int EVO_1_1 = 10;
-
 	public static final int EVO_1_2 = 11;
-
 	public static final int EVO_2_1 = 20;
-
 	public static final int EVO_2_2 = 21;
-
 	public static final int EVO_3_1 = 30;
-
 	public static final int EVO_3_2 = 31;
-
 	public static final int EVO_4_1 = 40;
-
 	public static final int EVO_4_2 = 41;
-
 	public static final int LOSE_1 = 100;
-
 	public static final int WIN_1 = 101;
-
 	public static final int LOSE_2 = 102;
-
 	public static final int WIN_2 = 103;
-
 	public static final int LOSE_3_1 = 104;
-
 	public static final int WIN_3 = 105;
-
 	public static final int LOSE_4 = 106;
-
 	public static final int WIN_4 = 107;
-
 	public static final int TEXT_5_1 = 108;
-
 	public static final int LOSE_5_1 = 109;
-
 	public static final int LOSE_5_2 = 110;
-
 	public static final int LOSE_5_3 = 111;
-
 	public static final int WIN_5 = 112;
-
 	public static final int CREDITS_1 = 113;
-
 	public static final int CREDITS_2 = 114;
-
 	public static final int CREDITS_3 = 115;
-
 	public static final int CREDITS_4 = 116;
-
 	public static final int CREDITS_5 = 117;
-
 	public static final int CREDITS_6 = 118;
-
 	public static final int CREDITS_7 = 119;
-
 	public static final int LOSE_3_2 = 120;
 
 	public static void loadTexts() {

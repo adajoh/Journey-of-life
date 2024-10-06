@@ -1,3 +1,5 @@
+
+/* Decompiler 14ms, total 158ms, lines 35 */
 package se.djax.ld24;
 
 import com.badlogic.gdx.Gdx;
@@ -5,9 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class win implements Screen {
 	int level;
-
 	float startDelay;
-
 	String text;
 
 	public win(int level, String text) {
@@ -33,5 +33,6 @@ public class win implements Screen {
 				LdJam.changeScreen(new Credits());
 			}
 		}
+
 	}
 }
